@@ -52,7 +52,7 @@ const hashing = (wordList) => {
             hashTable.letterIndex[i].add(wordList[i][letterPosition]);
         }
     }
-    return hashTable
+    return hashTable;
 }
 
 var steak = ["hot", "dot", "dog", "lot", "log", "cog"];

@@ -18,6 +18,7 @@ class BST {
                 } else {
                     if (!currentNode.left) {
                         currentNode.left = new Node(value);
+                        break;
                     } else {
                         currentNode = currentNode.left;
                     }
@@ -46,4 +47,12 @@ let binarySearchTree = new BST();
 console.log('hi')
 console.log(binarySearchTree)
 binarySearchTree.add(5)
+binarySearchTree.add(6)
+binarySearchTree.add(7)
+binarySearchTree.add(-1)
+
+
+
+console.log(binarySearchTree.head.right.right)
+
 console.log(binarySearchTree)
