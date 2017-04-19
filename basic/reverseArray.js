@@ -21,20 +21,6 @@ const duplicates = (array) => {
 let duplicateArray = [1, 1, 3, 3, 8, 20, 5];
 console.log(duplicates(duplicateArray));
 
-
-
-
-[7,8,9]
-[6,1,2]
-[5,4,3]
-
-[7, 8, 9, 10]
-[6, 1, 2, 11] 
-[5, 4, 3, 12]
-[14,13,]
-
-
-
 const reverseArray = (array) => {
     let left = 0;
     let right = array.length - 1;

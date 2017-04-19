@@ -38,4 +38,20 @@ const steps2 = (n) => {
 }
 
 
-console.log(steps2(4));
+const steps3 = (n, memo) => {
+    memo = memo || []
+    if (n === 0) {
+        return 1;
+    } else if (n < 0) {
+        return 0;
+    } else {
+        if (memo[n]) return memo[n];
+        else {
+            memo[n] = steps3(n - 1, memo) + steps3(n - 2, memo);
+            return memo[n];
+        }
+    }
+}
+
+console.log(steps3(3))
+
