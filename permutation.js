@@ -1,15 +1,22 @@
-// [a,b,c] 
+const permutations = (input) => {
+    let listOfPerm = new Set();
 
-//abc acb
-//bac bca
-//cab cba
-        
+    let helper = (input, result) => {
+        if (!input) {
+            return listOfPerm.add(result);
+        }
 
-const permutation = (inputs, results) => {
-    for (let i = 0; i < inputs.length; i++) {
-
+        for (let i = 0; i < input.length; i++) {
+            let newInput = input.substring(0,i) + input.substring(i+1);
+            helper(newInput, result + input[i]);
+        }
     }
+    helper(input, '');
+    
+    return [...listOfPerm];
 }
 
+console.log(permutations('aac'))
 
-[-20]
+//'ab'
+//'aa'
